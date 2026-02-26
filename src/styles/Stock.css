@@ -1,0 +1,63 @@
+.stock-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.stock-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.stock-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.stock-form select,
+.stock-form input {
+  padding: 10px;
+  font-size: 14px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.stock-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #2ecc71;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.stock-form button:hover {
+  opacity: 0.8;
+}
+
+.danger-btn {
+  background-color: #e74c3c;
+}
+
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stock-table th,
+.stock-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.stock-table th {
+  background-color: #34495e;
+  color: white;
+}
+
+.stock-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

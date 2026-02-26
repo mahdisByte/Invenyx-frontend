@@ -1,0 +1,8 @@
+.user-dashboard {
+  text-align: center;
+  padding: 50px;
+}
+.user-dashboard h1 {
+  font-size: 2.5rem;
+  color: #2563eb;
+}

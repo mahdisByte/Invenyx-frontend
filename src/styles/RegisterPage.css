@@ -1,0 +1,91 @@
+/* Full screen background */
+.register-page {
+  height: 100vh;
+  width: 100%;
+  background: url("../assets/images/login.jpg") no-repeat center center/cover;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark overlay for readability */
+.register-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* Form styling */
+.register-form {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 100%;
+  color: white;
+  z-index: 1;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.register-form h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1rem;
+}
+
+.register-form input::placeholder {
+  color: #e0e0e0;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: #10b981;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.register-form button:hover {
+  background: #0f9d75;
+  transform: translateY(-2px);
+}
+
+.register-form .error {
+  color: #f87171;
+  margin-bottom: 10px;
+}
+
+.register-form .success {
+  color: #34d399;
+  margin-bottom: 10px;
+}
