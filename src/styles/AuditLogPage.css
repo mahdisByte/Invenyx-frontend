@@ -1,0 +1,48 @@
+.audit-container {
+  padding: 30px;
+  color: white;
+}
+
+.audit-container h2 {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e1e2f;
+}
+
+.audit-table th,
+.audit-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.audit-table th {
+  background: #111;
+}
+
+.audit-table tr:hover {
+  background: #2a2a40;
+}
+
+/* ACTION COLORS */
+.action.stock-in {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.action.stock-out {
+  color: #f44336;
+  font-weight: bold;
+}

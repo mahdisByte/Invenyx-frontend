@@ -14,3 +14,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+
+//VITE_API_URL=https://localhost:7230/api

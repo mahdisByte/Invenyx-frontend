@@ -13,7 +13,7 @@ import StockInPage from "./pages/StockInPage";
 import StockOutPage from "./pages/StockOutPage";
 import StockHistoryPage from "./pages/StockHistoryPage";
 import DashboardPage from "./pages/DashboardPage";
-
+import AuditLogPage from "./pages/AuditLogPage";
 
 function App() {
   return (
@@ -58,44 +58,50 @@ function App() {
             }
           />
 
-            <Route
-              path="/stock-in"
-              element={
-                <ProtectedRoute role="admin">
-                  <StockInPage />
-                </ProtectedRoute>
-              }
-            />
+          <Route
+            path="/stock-in"
+            element={
+              <ProtectedRoute role="admin">
+                <StockInPage />
+              </ProtectedRoute>
+            }
+          />
 
-            <Route
-              path="/stock-out"
-              element={
-                <ProtectedRoute role="admin">
-                  <StockOutPage />
-                </ProtectedRoute>
-              }
-            />
+          <Route
+            path="/stock-out"
+            element={
+              <ProtectedRoute role="admin">
+                <StockOutPage />
+              </ProtectedRoute>
+            }
+          />
 
-            <Route
-              path="/stock-history"
-              element={
-                <ProtectedRoute>
-                  <StockHistoryPage />
-                </ProtectedRoute>
-              }
-            />
+          <Route
+            path="/stock-history"
+            element={
+              <ProtectedRoute>
+                <StockHistoryPage />
+              </ProtectedRoute>
+            }
+          />
 
-            <Route
-              path="/dashboard"
-              element={
-                <ProtectedRoute>
-                  <DashboardPage />
-                </ProtectedRoute>
-              }
-            />
-
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashboardPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/audit-logs"
+            element={
+              <ProtectedRoute>
+                <AuditLogPage />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
-        
       </div>
     </>
   );

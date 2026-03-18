@@ -100,6 +100,9 @@ function DashboardPage() {
               </button>
             </>
           )}
+          <button onClick={() => navigate("/audit-logs")}>
+            Audit logs
+          </button>
 
         </div>
       </div>
