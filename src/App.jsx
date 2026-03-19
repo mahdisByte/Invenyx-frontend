@@ -13,16 +13,22 @@ import StockHistoryPage from "./pages/StockHistoryPage";
 import DashboardPage from "./pages/DashboardPage";
 import AuditLogPage from "./pages/AuditLogPage";
 import Layout from "./components/Layout";
+import PublicLayout from "./components/PublicLayout";
+
 
 function App() {
   return (
     <Routes>
-      <Route element={<Layout />}>
 
+      <Route element={<PublicLayout />}>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+      </Route>
 
+      <Route element={<Layout />}>
+
+        
         <Route path="/supplier" element={<SupplierPage />} />
         <Route path="/product" element={<ProductPage />} />
 
