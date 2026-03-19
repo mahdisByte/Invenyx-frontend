@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
@@ -13,87 +12,86 @@ import StockOutPage from "./pages/StockOutPage";
 import StockHistoryPage from "./pages/StockHistoryPage";
 import DashboardPage from "./pages/DashboardPage";
 import AuditLogPage from "./pages/AuditLogPage";
+import Layout from "./components/Layout";
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <Routes>
+      <Route element={<Layout />}>
 
-      <div className="main-content">
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/supplier" element={<SupplierPage />} />
-          <Route path="/product" element={<ProductPage />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
 
-          {/* Admin Route */}
-          <Route
-            path="/admin-dashboard"
-            element={
-              <ProtectedRoute role="admin">
-                <AdminDashboard />
-              </ProtectedRoute>
-            }
-          />
+        <Route path="/supplier" element={<SupplierPage />} />
+        <Route path="/product" element={<ProductPage />} />
 
+        {/* Admin Route */}
+        <Route
+          path="/admin-dashboard"
+          element={
+            <ProtectedRoute role="admin">
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
 
-          {/* Category Page (Any Logged User) */}
-          <Route
-            path="/category"
-            element={
-              <ProtectedRoute>
-                <CategoryPage />
-              </ProtectedRoute>
-            }
-          />
+        <Route
+          path="/category"
+          element={
+            <ProtectedRoute>
+              <CategoryPage />
+            </ProtectedRoute>
+          }
+        />
 
-          <Route
-            path="/stock-in"
-            element={
-              <ProtectedRoute role="admin">
-                <StockInPage />
-              </ProtectedRoute>
-            }
-          />
+        <Route
+          path="/stock-in"
+          element={
+            <ProtectedRoute role="admin">
+              <StockInPage />
+            </ProtectedRoute>
+          }
+        />
 
-          <Route
-            path="/stock-out"
-            element={
-              <ProtectedRoute role="admin">
-                <StockOutPage />
-              </ProtectedRoute>
-            }
-          />
+        <Route
+          path="/stock-out"
+          element={
+            <ProtectedRoute role="admin">
+              <StockOutPage />
+            </ProtectedRoute>
+          }
+        />
 
-          <Route
-            path="/stock-history"
-            element={
-              <ProtectedRoute>
-                <StockHistoryPage />
-              </ProtectedRoute>
-            }
-          />
+        <Route
+          path="/stock-history"
+          element={
+            <ProtectedRoute>
+              <StockHistoryPage />
+            </ProtectedRoute>
+          }
+        />
 
-          <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <DashboardPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/audit-logs"
-            element={
-              <ProtectedRoute>
-                <AuditLogPage />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
-      </div>
-    </>
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <DashboardPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/audit-logs"
+          element={
+            <ProtectedRoute>
+              <AuditLogPage />
+            </ProtectedRoute>
+          }
+        />
+
+      </Route>
+    </Routes>
   );
 }
 
