@@ -4,7 +4,6 @@ import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import AdminDashboard from "./pages/AdminDashboard";
-import UserDashboard from "./pages/UserDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CategoryPage from "./pages/CategoryPage";
 import SupplierPage from "./pages/SupplierPage";
@@ -38,15 +37,6 @@ function App() {
             }
           />
 
-          {/* User Route */}
-          <Route
-            path="/user-dashboard"
-            element={
-              <ProtectedRoute role="user">
-                <UserDashboard />
-              </ProtectedRoute>
-            }
-          />
 
           {/* Category Page (Any Logged User) */}
           <Route

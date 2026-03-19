@@ -47,7 +47,7 @@ const Navbar = () => {
           {token && role === "user" && (
             <>
               <Link
-                to="/user-dashboard"
+                to="/dashboard"
                 className="text-gray-300 hover:text-white transition"
               >
                 Dashboard
@@ -69,7 +69,7 @@ const Navbar = () => {
           {token && role === "admin" && (
             <>
               <Link
-                to="/admin-dashboard"
+                to="/dashboard"
                 className="text-gray-300 hover:text-white transition"
               >
                 Admin Panel

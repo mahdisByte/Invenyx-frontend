@@ -87,7 +87,7 @@ function DashboardPage() {
         {/* Topbar */}
         <div className="topbar">
           <h1>Performance Report</h1>
-          <div className="user">Admin</div>
+          
         </div>
 
         {/* Cards */}
